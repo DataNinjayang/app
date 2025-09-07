@@ -1,7 +1,4 @@
-# ======= 中文字体（Noto 无版权，覆盖简繁日韩） =======
 fonts-noto-cjk
-
-# ======= 图片/二维码底层依赖 =======
 libjpeg-dev
 zlib1g-dev
 libpng-dev
@@ -9,6 +6,4 @@ libfreetype6-dev
 liblcms2-dev
 libopenjp2-7-dev
 libtiff5-dev
-
-# ======= matplotlib 后端支持 =======
 python3-tk
