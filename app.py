@@ -1,5 +1,5 @@
 # app.py
-# 第一版完整还原 + 底部二维码（直方对比图已移除）
+# 扫码永久直达 https://hczjdm4tkq6cg9jsanhepj.streamlit.app/
 # 运行：streamlit run app.py
 
 import streamlit as st
@@ -153,10 +153,9 @@ def query_section(df, numeric_columns):
             st.subheader(f"查询结果：共找到{len(matching_data)}家企业")
             st.dataframe(matching_data, use_container_width=True, height=300)
 
-# ---------------- 底部二维码（新增） ----------------
+# ---------------- 底部二维码（固定网址） ----------------
 def show_qr_code():
-    domain = st.query_params.get("_url", "") or "localhost:8501"
-    url = f"https://{domain}" if not domain.startswith("http") else domain
+    url = "https://hczjdm4tkq6cg9jsanhepj.streamlit.app/"
     qr = qrcode.QRCode(box_size=10, border=4)
     qr.add_data(url)
     qr.make(fit=True)
